@@ -5,6 +5,15 @@
 ;; emoji采用Apple Color Emoji字体
 ;;; Code:
 
+;; 添加下钩子延迟加载字体
+(defun defer-font-setup (frame)
+  "Deferred font setup, as the window system may not be initialized yet."
+  (select-frame frame)
+  (when (display-graphic-p frame)
+    (set-frame-font "Iosevka" t t)))
+
+(add-hook 'after-make-frame-functions 'defer-font-setup)
+
 ;;配置font
 (defun qiang-font-existsp (font)
   (if (null (x-list-fonts font)) nil t))
