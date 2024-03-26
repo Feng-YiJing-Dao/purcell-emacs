@@ -159,7 +159,9 @@ typical word processor."
 
 
 ;;; To-do settings
-
+;; HOLD(h@)       ; 进入时添加笔记
+;; HOLD(h/!)      ; 离开时添加变更信息
+;; HOLD(h@/!)     ; 进入时添加笔记，离开时添加变更信息
 (setq org-todo-keywords
       (quote ((sequence "TODO(t)" "NEXT(n)" "|" "DONE(d!/!)")
               (sequence "PROJECT(p)" "|" "DONE(d!/!)" "CANCELLED(c@/!)")

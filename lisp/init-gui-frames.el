@@ -88,10 +88,6 @@
 
 (require-package 'disable-mouse)
 
-
-(when (fboundp 'pixel-scroll-precision-mode)
-  (pixel-scroll-precision-mode))
-
 
 (provide 'init-gui-frames)
 ;;; init-gui-frames.el ends here
